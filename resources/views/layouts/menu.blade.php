@@ -58,7 +58,7 @@
                     <a href="{{ url('/') }}" class="nav-item nav-link active">
                         Inicio
                     </a>
-                    <a href="{{ route('about') }}" class="nav-item nav-link">
+                    <a href="{{ url('/about') }}" class="nav-item nav-link">
                         About
                     </a>
   
@@ -67,20 +67,22 @@
                             Aprender
                         </a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ route('l_inicio') }}" class="dropdown-item">
+                            <a href="{{ url('/l_inicio') }}" class="dropdown-item">
                                 Lenguaje de señas
                             </a>
-                            <a href="{{ route('b_inicio') }}" class="dropdown-item">
+                            <a href="{{ url('/b_inicio') }}" class="dropdown-item">
                                 Braille
                             </a>
                         </div>
                     </div>
+                    @guest
                     <a href="{{ route('login') }}" class="nav-item nav-link">
                         Login
                     </a>
                     <a href="{{ route('register') }}" class="nav-item nav-link">
                         Register
                     </a> 
+                    @endguest
             </div>
         </nav>
         
@@ -248,7 +250,6 @@
     <script src="{{ asset('css/lib/waypoints/waypoints.min.js') }}"></script>
     <script src="{{ asset('css/lib/counterup/counterup.min.js') }}"></script>
     <script src="{{ asset('css/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
 

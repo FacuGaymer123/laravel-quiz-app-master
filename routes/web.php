@@ -16,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('index',)->render();;
+});
+
+Route::get('/login', function () {
     return redirect()->route('client.test');
+});
+
+Route::get('/about', function () {
+    return view('client.about', )->render();
 });
 
 Route::group(['middleware' => 'auth'], function() {
@@ -24,9 +32,15 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('test',[\App\Http\Controllers\TestController::class, 'index'])->name('client.test');
     Route::post('test',[\App\Http\Controllers\TestController::class, 'store'])->name('client.test.store');
     Route::get('results/{result_id}',[\App\Http\Controllers\ResultController::class, 'show'])->name('client.results.show');
-    Route::get('/index', function () {
-        return view('client.index',)->render();;
+
+    Route::get('/l_inicio', function () {
+        return view('client.l_inicio',)->render();;
     });
+    
+    Route::get('/b_inicio', function () {
+        return view('client.b_inicio',)->render();;
+    });
+
 
     // admin only
     Route::group(['middleware' => 'isAdmin','prefix' => 'admin', 'as' => 'admin.'], function() {
