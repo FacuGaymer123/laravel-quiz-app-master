@@ -35,6 +35,8 @@
                 <a href="{{ route('register') }}" class="nav-item nav-link">
                     Registrarse
                 </a>
+                @else
+                
                 @endguest
             </div>
     </nav>

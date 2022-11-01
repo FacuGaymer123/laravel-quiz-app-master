@@ -33,6 +33,10 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('test',[\App\Http\Controllers\TestController::class, 'store'])->name('client.test.store');
     Route::get('results/{result_id}',[\App\Http\Controllers\ResultController::class, 'show'])->name('client.results.show');
 
+    Route::get('/', function () {
+        return view('index',)->render();;
+    });
+
     Route::get('/l_inicio', function () {
         return view('client.l_inicio',)->render();;
     });
