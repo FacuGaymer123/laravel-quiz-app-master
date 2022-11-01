@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 @include('partials.menu_head')
+
 <body>
- <!-- Spinner Start -->
- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner"></div>
     </div>
     <!-- Spinner End -->
 
     <!-- Navbar & Carousel Start -->
-@include('partials.navbar')
+    @include('partials.navbar')
 
-@include('partials.carousel')
+    @include('partials.carousel')
     <!-- Navbar & Carousel End -->
 
 
@@ -32,13 +33,10 @@
         </div>
     </div>
     <!-- Full Screen Search End -->
-    
 
-    <h6><a name="about" >SOBRE NOSOTROS</a></h6>
-    
-
+    @include('partials.about')
     <!-- Footer Start -->
-        @include('partials.footer')
+    @include('partials.footer')
     <!-- Footer End -->
 
 
@@ -46,8 +44,10 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries --> @include('partials.lib_js') <!-- Template Javascript -->
-    
+    <!-- JavaScript Libraries --> @include('partials.lib_js')
+    <!-- Template Javascript -->
+
 
 </body>
+
 </html>
