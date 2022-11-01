@@ -58,7 +58,7 @@
                     <a href="{{ url('/') }}" class="nav-item nav-link active">
                         Inicio
                     </a>
-                    <a href="" class="nav-item nav-link">
+                    <a href="{{ route('about') }}" class="nav-item nav-link">
                         About
                     </a>
   
@@ -67,10 +67,10 @@
                             Aprender
                         </a>
                         <div class="dropdown-menu m-0">
-                            <a href="" class="dropdown-item">
+                            <a href="{{ route('l_inicio') }}" class="dropdown-item">
                                 Lenguaje de señas
                             </a>
-                            <a href="" class="dropdown-item">
+                            <a href="{{ route('b_inicio') }}" class="dropdown-item">
                                 Braille
                             </a>
                         </div>
@@ -87,7 +87,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('css/carousel-1.jpg') }}" alt="Image">
+                    <img class="w-100" src="{{ asset('img/carousel-1.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="{{ asset('css/carousel-2.jpg') }}" alt="Image">
+                    <img class="w-100" src="{{ asset('img/carousel-2.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Creative & Innovative</h5>
@@ -243,11 +243,11 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="{{ asset('css/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('css/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('css/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('css/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('css/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
     <!-- Template Javascript -->
     <script src="{{ asset('js/main.js') }}"></script>
