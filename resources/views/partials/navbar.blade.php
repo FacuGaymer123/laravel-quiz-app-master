@@ -41,6 +41,7 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
+                            
                         @else
                             
                                 <a id="navbarDropdown" class="nav-link" href="#" role="button" v-pre>

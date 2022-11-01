@@ -1,20 +1,22 @@
 
 
 @include('partials.menu_head')
+
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
+
 @include('partials.navbar')
 
+<body>
 
 <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
         <form method="POST" class="sign-in-form" action="{{ route('login') }}">
         @csrf
-          <form action="#" class="sign-in-form">
             <h2 class="title">Inicio de Sesion</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
@@ -39,19 +41,18 @@
                         </span>
                     @enderror
 
-
             </div>
            
             <label class="form-check-label" for="remember"> <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                                        {{ __('Remember Me') }}
-                                    </label>
+                {{ __('Remember Me') }}
+            </label>
 
             <button type="submit" class="btn solid">
             {{ __('Login') }}
             </button>
 
-       
           </form>
+          
           <form action="#" class="sign-up-form">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
@@ -88,26 +89,24 @@
               Crear Cuenta
             </button>
           </div>
-          <img src="{{ asset('img/log.svg') }}" class="image" alt="" />
+          <img src="{{ asset('img/log.svg') }}" class="images" alt="" />
         </div>
         <div class="panel right-panel">
           <div class="content">
             <h3>¿Ya tienes una cuenta?</h3>
             <p>
-              muy bien capo, pero anda al inicio de sesion
+                muy bien capo, pero anda al inicio de sesion
             </p>
             <button class="btn transparent" id="sign-in-btn">
               Inicia de sesion
             </button>
           </div>
-          <img src="{{ asset('img/register.svg') }}" class="image" alt="" />
+          <img src="{{ asset('img/register.svg') }}" class="images" alt="" />
         </div>
       </div>
     </div>
+</body>
 
     <script src="{{ asset('js/app_login.js') }}"></script>
-
-
-
 
 @include('partials.lib_js')

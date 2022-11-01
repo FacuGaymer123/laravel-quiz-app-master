@@ -40,9 +40,7 @@
                                                 @endif
                                             </div>
                                         </div>
-                                    <script>
-                                        
-                                    </script>
+
                                     
                                     @endforeach
                                 </div>
