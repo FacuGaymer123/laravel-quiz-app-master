@@ -9,9 +9,9 @@
     <!-- Spinner End -->
 
     <!-- Navbar & Carousel Start -->
-         @include('partials.navbar')
+@include('partials.navbar')
 
-        @include('partials.carousel')
+@include('partials.carousel')
     <!-- Navbar & Carousel End -->
 
 
