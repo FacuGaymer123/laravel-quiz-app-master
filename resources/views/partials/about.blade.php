@@ -7,7 +7,7 @@
                     <h5 class="fw-bold text-primary text-uppercase"><a name="about">Sobre Nosotros</a></h5>
                     <h1 class="mb-0">Jovenes Emprendedores Buscando La Inclusividad</h1>
                 </div>
-                <p class="mb-4">Somos un grupo pequeño de jovenes que buscan la inclusividad a traves del aprendizaje del lenguaje de señas y el sistema de escritura braille</p>
+                <p class="mb-4">Somos un grupo pequeño de jovenes que buscan la inclusividad a traves del aprendizaje del lenguaje de señas y el sistema de escritura braille.</p>
                 <div class="row g-0 mb-3">
                     <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
                         <h5 class="mb-3"><i class="fa fa-check text-primary me-3"></i>Diversión Asegurada</h5>
@@ -23,11 +23,11 @@
                         <i class="fa fa-phone-alt text-white"></i>
                     </div>
                     <div class="ps-4">
-                        <h5 class="mb-2">Call to ask any question</h5>
+                        <h5 class="mb-2">Llamanos para consultar cualquier duda</h5>
                         <h4 class="text-primary mb-0">+012 345 6789</h4>
                     </div>
                 </div>
-                <a href="quote.html" class="btn btn-primary py-3 px-5 mt-3 wow zoomIn" data-wow-delay="0.9s">Request A Quote</a>
+
             </div>
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100">
