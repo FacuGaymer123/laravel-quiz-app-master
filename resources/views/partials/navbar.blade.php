@@ -28,15 +28,35 @@
                         </a>
                     </div>
                 </div>
-                @guest
-                <a href="{{ route('login') }}" class="nav-item nav-link">
-                    Iniciar Sesión
-                </a>
-                <a href="{{ route('register') }}" class="nav-item nav-link">
-                    Registrarse
-                </a>
-                @else
-                
-                @endguest
+
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            
+                                <a id="navbarDropdown" class="nav-link" href="#" role="button" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <a class="nav-link" href="#"
+                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                        
+                        @endguest
+                    </ul>
             </div>
     </nav>
