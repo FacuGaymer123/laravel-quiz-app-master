@@ -8,7 +8,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="{{ url('/') }}" class="nav-item nav-link active">
+                <a href="{{ url('/') }}" class="nav-item nav-link ">
                     Inicio
                 </a>
                 <a href="#about" class="nav-item nav-link">
@@ -32,13 +32,7 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" target="_blank" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
                             

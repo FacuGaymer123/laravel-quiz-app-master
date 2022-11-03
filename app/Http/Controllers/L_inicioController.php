@@ -12,7 +12,7 @@ class L_inicioController extends Controller
     public function index()
     {
 
-        $categories = Category::('categories')->get();
+        $categories = Category::all();
            
 
         return view('client.l_inicio', compact('categories'));
