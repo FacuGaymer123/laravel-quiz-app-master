@@ -23,19 +23,14 @@ Route::get('/login', function () {
     return redirect()->route('client.test');
 });
 
-Route::get('/about', function () {
-    return view('client.about', )->render();
-});
+
 
 Route::group(['middleware' => 'auth'], function() {
-   
+
+    Route::get('l_inicio',[\App\Http\Controllers\L_inicioController::class, 'index'])->name('client.l_inicio');
     Route::get('test',[\App\Http\Controllers\TestController::class, 'index'])->name('client.test');
     Route::post('test',[\App\Http\Controllers\TestController::class, 'store'])->name('client.test.store');
     Route::get('results/{result_id}',[\App\Http\Controllers\ResultController::class, 'show'])->name('client.results.show');
-
-
-    Route::get('l_inicio',[\App\Http\Controllers\L_inicioController::class, 'index'])->name('client.l_inicio');
-  
     
     Route::get('/b_inicio', function () {
         return view('client.b_inicio',)->render();;

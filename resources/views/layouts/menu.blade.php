@@ -35,17 +35,19 @@
     <!-- Full Screen Search End -->
 
     @include('partials.about')
-    <!-- Footer Start -->
+    
+    @include('partials.team')
+
     @include('partials.footer')
-    <!-- Footer End -->
+
 
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries --> @include('partials.lib_js')
-    <!-- Template Javascript -->
+    @include('partials.lib_js')
+    
 
 
 </body>

@@ -13,14 +13,14 @@ class TestController extends Controller
     public function index()
     {
         $categories = Category::with(['categoryQuestions' => function ($query) {
-                $query->inRandomOrder()
-                    ->with(['questionOptions' => function ($query) {
-                        $query->inRandomOrder();
-                    }])->where('id',1);
-            }])
-            ->whereHas('categoryQuestions')
-            ->get();
-
+            $query->inRandomOrder()
+                ->with(['questionOptions' => function ($query) {
+                    $query->inRandomOrder();
+                }]);
+        }])
+        ->whereHas('categoryQuestions')->where('id',1)
+        ->get();
+        
         return view('client.test', compact('categories'));
     }
 

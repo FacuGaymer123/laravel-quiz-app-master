@@ -45,7 +45,7 @@
     
           <form method="POST" class="sign-up-form" action="{{ route('register') }}">
             @csrf
-                <h2 class="title">Sign up</h2>
+                <h2 class="title">Registrarse</h2>
                 <div class="input-field">
                   <i class="fas fa-user"></i>
 
@@ -119,7 +119,7 @@
               Inicia de sesion
             </button>
           </div>
-          <img src="{{ asset('img/register.svg') }}" class="image" alt="" />
+          <img src="{{ asset('img/target.png') }}" class="image" alt="" />
         </div>
       </div>
   </div>
