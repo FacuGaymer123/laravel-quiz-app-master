@@ -4,7 +4,7 @@
         <div class="row g-5">
             <div class="col-lg-7">
                 <div class="section-title position-relative pb-3 mb-5">
-                    <h5 class="fw-bold text-primary text-uppercase"><a name="about">Sobre Nosotros</a></h5>
+                    <h5 class="fw-bold text-primary text-uppercase"><a>Sobre Nosotros</a></h5>
                     <h1 class="mb-0">Jovenes Emprendedores Buscando La Inclusividad</h1>
                 </div>
                 <p class="mb-4">Somos un grupo pequeño de jovenes que buscan la inclusividad a traves del aprendizaje del lenguaje de señas y el sistema de escritura braille.</p>
@@ -31,7 +31,7 @@
             </div>
             <div class="col-lg-5" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ asset('img/logo.svg') }}" style="object-fit: cover;">
                 </div>
             </div>
         </div>

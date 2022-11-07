@@ -11,7 +11,7 @@
             <div class="input-field">
               <i class="fas fa-user"></i>
 
-              <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+              <input id="email" type="email" placeholder="Email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                     @error('email')
                         <span class="invalid-feedback" role="alert">
@@ -23,14 +23,13 @@
             <div class="input-field">
               <i class="fas fa-lock"></i>
 
-              <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+              <input id="password" type="password" placeholder="Contraseña" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                     @error('password')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                     @enderror
-
             </div>
            
             <label class="form-check-label" for="remember"> <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -85,7 +84,7 @@
                 <div class="input-field">
                   <i class="fas fa-lock"></i>
 
-                <input id="password-confirm" placeholder="Repite la contraseña" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                <input id="password-confirm" placeholder="Repita la contraseña" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
           
                 </div>
                 <button type="submit" class="btn">
@@ -109,6 +108,8 @@
           </div>
           <img src="{{ asset('img/log.svg') }}" class="image" alt="" />
         </div>
+
+        
         <div class="panel right-panel">
           <div class="content">
             <h3>¿Ya tienes una cuenta?</h3>

@@ -33,7 +33,7 @@
         </div>
     </div>
     <!-- Full Screen Search End -->
-
+    
     @include('partials.about')
     
     @include('partials.team')
