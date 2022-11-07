@@ -33,13 +33,14 @@
         </div>
     </div>
     <!-- Full Screen Search End -->
-
+    
     @include('partials.about')
     
     @include('partials.team')
+    
+    @include('partials.syllabus')
 
     @include('partials.footer')
-
 
 
     <!-- Back to Top -->

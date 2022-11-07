@@ -1,10 +1,11 @@
 <!-- About Start -->
+<a name="about"></a>
 <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-7">
                 <div class="section-title position-relative pb-3 mb-5">
-                    <h5 class="fw-bold text-primary text-uppercase"><a name="about">Sobre Nosotros</a></h5>
+                    <h5 class="fw-bold text-primary text-uppercase"></h5><a1>Sobre Nosotros</a1>
                     <h1 class="mb-0">Jovenes Emprendedores Buscando La Inclusividad</h1>
                 </div>
                 <p class="mb-4">Somos un grupo pequeño de jovenes que buscan la inclusividad a traves del aprendizaje del lenguaje de señas y el sistema de escritura braille.</p>
