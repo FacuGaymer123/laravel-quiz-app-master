@@ -26,7 +26,7 @@
             </button>
             <div class="content">
                 <p>La lengua de señas es una lengua como cualquier otra, no se trata de una mera mímica, contiene una estructura y léxico propio. Se diferencian de las lenguas orales solamente en que utilizan el canal de comunicación viso-gestual en lugar del audio-vocal, por ser un lenguaje visual es el único lenguaje completamente accesible para las personas sordas.</p>
-                <img src="{{ asset('img/rios2.jpg') }}">
+                <img src="{{ asset('img/señas.jpg') }}">
             </div>
         </div>
         <div class="wrapper">
@@ -36,6 +36,7 @@
             </button>
             <div class="content">
                 <p>El sistema de escritura Braille fue creado en 1825 por Luis Braille ideó el sistema braille, también conocido como cecografía, aporta a las personas ciegas una herramienta válida y eficaz para leer, escribir, acceder a la educación, a la cultura y a la información sin necesidad de ver, guiándose solo por el tacto.</p>
+                <img src="{{ asset('img/braille.jpg') }}">
             </div>
         </div>
     </div>
