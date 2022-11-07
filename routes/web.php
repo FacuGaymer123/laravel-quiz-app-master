@@ -37,6 +37,10 @@ Route::group(['middleware' => 'auth'], function() {
     });
 
 
+
+
+    
+
     // admin only
     Route::group(['middleware' => 'isAdmin','prefix' => 'admin', 'as' => 'admin.'], function() {
         Route::get('dashboard', [\App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard.index');
