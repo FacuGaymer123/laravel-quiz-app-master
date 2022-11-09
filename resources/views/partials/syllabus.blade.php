@@ -15,10 +15,13 @@
 
 <body>
     <a name="syllabus"></a>
-    <div>
-        <h2 class="carotopopito">Lenguajes de LSB<h2>
-    </div>
+
+
     <div class="container-2">
+        <div>
+            <h2 class="carotopopito">Lenguajes de LSB<h2>
+        </div>
+        <br>
         <div class="wrapper">
             <button class="toggle">
                 lenguaje de señas
@@ -39,6 +42,7 @@
                 <img src="{{ asset('img/braille.jpg') }}">
             </div>
         </div>
+        <br>
     </div>
     <!--Script-->
     <script src="{{ asset('js/script.js') }}"></script>

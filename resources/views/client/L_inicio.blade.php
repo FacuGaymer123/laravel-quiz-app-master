@@ -33,45 +33,24 @@
     <div class="container px-lg-5">
         <div class="row gx-lg-5">
 @foreach($categories as $category)
-
-@switch($category->id)
-
-    @case(1)
-        <div class="col-lg-6 col-xxl-4 mb-5">
-            <div class="card bg-light border-0 h-100">
-                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
-                    <h2 class="fs-4 fw-bold"><a href="{{ route('client.test') }}">{{$category->name}}</a></h2>
-                    <p class="mb-0">With Bootstrap 5, we've created a fresh new layout for this template!</p>
-                </div>
-            </div>
+<div class="col-lg-6 col-xxl-4 mb-5">
+    <div class="card bg-light border-0 h-100">
+        <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+            <h2 class="fs-4 fw-bold"><a href="{{route('client.test',$category->id)}}">{{$category->name}}</a></h2>
+            <p class="mb-0">The heroic part of this template is the jumbotron hero header!</p>
         </div>
-    @break
- 
-    @case(2)
-        <div class="col-lg-6 col-xxl-4 mb-5">
-            <div class="card bg-light border-0 h-100">
-                <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
-                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
-                    <h2 class="fs-4 fw-bold"><a href="{{ url('/b_inicio') }}">{{$category->name}}</a></h2>
-                    <p class="mb-0">As always, Start Bootstrap has a powerful collectin of free templates.</p>
-                </div>
-            </div>
-        </div>
-    @break
- 
-        
-@endswitch
-
+    </div>
+</div>
 @endforeach
 
 </form>
 
 
         <!-- Page Features-->
-        
 
-            
+
+
             <div class="col-lg-6 col-xxl-4 mb-5">
                 <div class="card bg-light border-0 h-100">
                     <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
@@ -115,7 +94,7 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-      
+
 
 @include('partials.lib_js')
 
