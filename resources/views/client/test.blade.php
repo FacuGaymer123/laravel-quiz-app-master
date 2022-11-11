@@ -1,42 +1,54 @@
-@include('partials.menu_head')
+
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="{{ asset('css/test.css') }}" rel="stylesheet">
+    </head>
+    @include('partials.menu_head')
+<body id="nose">
+<div class="navbar-asq">
 @include('partials.navbar')
+</div>
 
 
-<div class="container">
+@if (session('status'))
+<div>
+    <div>
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
+        </div>
+    </div>
+</div>
+@endif
+
+
+<div class="container-test">
     <div>
         <div>
-            <div class="mt-5" style="background-color: #024d5e; " class="card">
-
+            <div class="sub-container_test">
                 <div>
-                    @if (session('status'))
-                    <div>
-                        <div>
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-
+                    
                     <form method="POST" action="{{ route('client.test.store') }}">
                         @csrf
                         @foreach ($categories as $category)
                         @foreach ($category->categoryQuestions as $question)
-                        <div style="background-color: #17a2b4; color: white; ">
+                        <div class="questions">
+
                             <div>{{ $question->question_text }}</div>
-                            <img src="{{ $question-> img }}" alt="">
+                            <img class="question-img" src="{{ $question-> img }}" alt="">
                             <div style="background-color: #707070; color: white; ">
                                 <input type="hidden" name="questions[{{ $question->id }}]" value="">
                                 @foreach ($question->questionOptions as $option)
-                                <div class="content-input">
-                                    <label for="myRadioID">
+                                <div class="conteiner-input">
+                                    <label class="inputxd">
                                         <input type="radio" name="questions[{{ $question->id}}]"
-                                            id="option-{{ $option->id }}" class="radio__input" value="{{ $option->id }}"
+                                            id="option-{{ $option->id }}"  value="{{ $option->id }}"
                                             @if (old("questions.$question->id") == $option->id) checked @endif>{{
                                         $option->option_text }}
-
                                     </label>
-
                                 </div>
                                 @endforeach
                             </div>
@@ -48,14 +60,16 @@
 
                         </div>
                         @endforeach
-                        @endforeach
-                        <input type="submit">
+                    @endforeach
+                        <input class="enviar" type="submit">
                 </div>
             </div>
         </div>
         </form>
     </div>
 </div>
-</div>
-</div>
-</div>
+
+@include('partials.lib_js')
+</body>
+</html>
+
