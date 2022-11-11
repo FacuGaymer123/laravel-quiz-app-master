@@ -1,7 +1,8 @@
 
 #nose {
   
-    background-color: #29bed5;
+    background-image: url(https://media.istockphoto.com/id/519724561/es/foto/fondo-de-globos.jpg?s=612x612&w=0&k=20&c=yElBXpYEfbXVmS9n6mhjkhwKykDJzRhh9YtFnmWtVTY=);
+    background-size: cover;
 }
 
 .container-test {
@@ -12,8 +13,9 @@
 }
 
 .sub-container_test {
-
-    width: 100%;
+    background-color: #29bed5;
+    transform: translate(35%,0);
+    width: 60%;
     display:flex;
     flex-direction:column;
     justify-content:center;
