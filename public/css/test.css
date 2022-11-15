@@ -85,6 +85,9 @@
 .question-img {
     width: 200px;
 }
+.option-img {
+    width: 150px;
+}
 
 @media(max-width:576px){
     .question{

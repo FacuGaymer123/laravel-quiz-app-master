@@ -48,6 +48,7 @@
                                             id="option-{{ $option->id }}"  value="{{ $option->id }}"
                                             @if (old("questions.$question->id") == $option->id) checked @endif>{{
                                         $option->option_text }}
+                                        <img class="option-img pt-4" src="{{ $option-> img2 }}" alt="">
                                     </label>
                                 </div>
                                 @endforeach
